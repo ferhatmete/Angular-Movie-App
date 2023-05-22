@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'movies', // <movies></movies>
-  templateUrl: './movies.html',
-  
+  selector: 'movies',
+  templateUrl: './movies.component.html',
+  styleUrls: ['./movies.component.css']
 })
-export class MoviesComponent {}
+export class MoviesComponent {
+
+}
