@@ -5,7 +5,7 @@ import { MovieService } from '../movie.service';
 @Component({
   selector: 'movies',
   templateUrl: 'movies.component.html',
-  styleUrls: ['./movies.component.css']
+  styleUrls: ['./movies.component.css'],
 })
 export class MoviesComponent implements OnInit {
   title = 'Movie List';
@@ -23,6 +23,8 @@ export class MoviesComponent implements OnInit {
   }
 
   getMovies(): void {
-    this.movies = this.movieService.getMovies();
+    this.movieService.getMovies().subscribe((movies) => {
+      this.movies = movies;
+    });
   }
 }
